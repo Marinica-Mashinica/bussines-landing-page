@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="./primjeri.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                Slika
+            </div>
+            <div class="title">
+                <h1>naslov stranice</h1>
+            </div>
+        </div>
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li>Link</li>
+                    <li>Link</li>
+                    <li>Link</li>
+                    <li>Link</li>
+                    <li>Link</li>
+                </ul>
+            </nav>
+        </div>
+        <section class="cards">
+            <h2>Postovi u obliku kartica</h2>
+            <p>
+                Sljedeće kartice su div-elementi koji imaju sve propertije
+                jednake, osim veličine. U svakoj kartici piše točno njezino
+                oblikovanje u CSS-u. Razlikuju se jedino u width-propertiju; te
+                su vrijednosti određene novijim CSS formulama min(), max() i
+                clamp().
+            </p>
+            <div class="card-min">
+                <h3>Vrijednost min()</h3>
+                <p>
+                    Min() u zagradi prima dvije ili više vrijednosti, a prikazat
+                    će se najmanja vrijednost u odnosu na širinu viewporta.
+                    Ovdje imamo primjer <code>min(600px, 70%)</code>, što znači
+                    da će na malim ekranima širina ove kartice iznositi 70%
+                    parent-elementa, a na velikim ekranima iznosit će 600px jer
+                    je to manje nego što bi iznosilo 70% (npr, 70% od 1094 je
+                    oko 700px, što je više od 600px, a min() bira manju
+                    vrijednost koja je u ovom slučaju 600px).
+                </p>
+            </div>
+            <div class="card-max">
+                <h3>Vrijednost max()</h3>
+                <p>
+                    Max() prima dvije ili više vrijednosti te izabire najveću
+                    (maksimalnu) vrijednost od onih koje smo napisali u zagradi.
+                    Ovdje imamo primjer suprotan prethodnom:
+                    <code>max(400px, 70%)</code>, što znači da će na velikim
+                    ekranima, na kojima je 70% puno više od 400px, odabrati tu
+                    vrijednost, a na manjim ekranima, gdje bi 70% iznosilo
+                    300px, odabrat će 400px.
+                </p>
+            </div>
+            <div class="card-clamp">
+                <h3>Vrijednost clamp()</h3>
+                <p>
+                    Ova vrijednost prima 3 veličine! Također, za razliku od
+                    prethodne dvije, važan je redoslijed! Prva vrijednost koju
+                    pišemo je minimalna vrijednost, druga je idealna vrijednost
+                    koju želimo, a treća je maksimalna vrijednost. Ova kartica
+                    ima width od <code>clamp(100px, 70%, 700px)</code> što znači
+                    da će težiti iznositi 70% parent-elementa, ali će na manjim
+                    ekranima biti 100, a na većima 700px.
+                </p>
+            </div>
+        </section>
+        <div class="sidebar">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                saepe et nobis porro optio dolor facilis corrupti! Ipsum earum,
+                veniam error amet libero et sit laborum qui a nesciunt? Error.
+            </p>
+        </div>
+    </body>
+</html>
