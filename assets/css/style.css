@@ -63,7 +63,7 @@
   box-sizing: border-box;
 }
 ul, ol {
-  list-style: none;
+  list-style-type:none;
 
 }
 a, a:link, a:visited, a:hover, a:active {
@@ -94,19 +94,41 @@ body{
   background-repeat: no-repeat;
   background-position-y:bottom;
   background-color: var(--clr-light);
-  background-blend-mode:soft-light;
+  background-blend-mode:overlay;
+  border-bottom: 3px solid var(--clr-accent);
+  border-radius: 5px;
 }
 .header-items {
   display: flex;
   flex-direction: row;
+  padding: 1rem 2rem;
+}
+
+.main-title {
+  color: var(--clr-primary);
+  text-emphasis-style:var(--antiflash-white);
+}
+
+.main-motto {
+  color: var(--clr-primary);
+  text-shadow: 1px 1px 1px var(--clr-dark);
+  text-align: center;
+  line-height: 1.2rem;
+  
 }
 
 nav {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 nav li {
   display: inline-block;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  font-variant: small-caps;
+  font-stretch:wider;
 }
 nav a, a:link, a:visited {
   color: var(--clr-accent);
@@ -128,10 +150,7 @@ nav a::after{
 nav a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
-  text-transform: uppercase;
 }
-
-
 
 h1{
   font-family: var(--font-serif);
@@ -167,11 +186,7 @@ h2{
   font-size: 1.2rem;
   text-align: center;
 }
-nav a {
-  display: inline-block;
-  padding: 0.5rem;
-  color: var(--clr-primary);
-}
+
 .logo{
   width: 100px;
   position: absolute;
@@ -266,12 +281,38 @@ flex-direction: column;
 }
 
 main section{
-  border: 3px solid black;
+  border-top: 2px solid var(--clr-accent);
+  border-left: 2px dotted var(--clr-accent);
+  border-right: 2px dotted var(--clr-accent);
+  border-bottom: 2px double var(--clr-accent);
+  border-radius: 5px;
   margin: 1em 1.4em;
   padding: 1em 1.2em;
-  background: var(--clr-secondary);
+  background: var(--clr-primary);
+  
 }
 
-main .h2{
+main h2{
+color: var(--clr-light);
+}
 
+
+
+.container-flex {
+  width: max(70%, 600px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+}
+
+.container-flex img{
+  
+  width: 45%;
+}
+.container-flex p {
+  width: 40%;
+  text-align: justify;
 }
