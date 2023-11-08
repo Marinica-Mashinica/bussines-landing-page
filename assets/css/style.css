@@ -39,7 +39,7 @@
 
 /* LIGHT/DARK THEME SWITCHING VARIABLES */
 --clr-light: #c1d2d7ff;
---clr-dark: rgb(17, 20, 21);
+--clr-dark: #111415;
 
 --clr-text-dark: #dbc0b7ff;
 --clr-bcgd-dark: #191510ff;
@@ -89,14 +89,13 @@ body{
 /* ====== MAIN HEADER => LOGO, NAVIGATION AND TITLES WITH LIGHT/DARK MODE SWITCH       */
 
 .main-header{
-  background-image: url('../img/buildings.jpg');
-  background-size:cover;
+  background-image: url('../svg/white-waves-960x200.svg');
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position-y:bottom;
-  background-color: var(--clr-light);
-  background-blend-mode:overlay;
-  border-bottom: 3px solid var(--clr-accent);
+  background-position-y: top;
+  border-bottom: 2px transparent var(--clr-accent);
   border-radius: 5px;
+  
 }
 .header-items {
   display: flex;
@@ -105,13 +104,13 @@ body{
 }
 
 .main-title {
-  color: var(--clr-primary);
-  text-emphasis-style:var(--antiflash-white);
+  color: var(--clr-light);
+  text-shadow: 2px 2px 2px var(--clr-dark);
 }
 
 .main-motto {
-  color: var(--clr-primary);
-  text-shadow: 1px 1px 1px var(--clr-dark);
+  color: var(--clr-light);
+  text-shadow: 2px 2px 1px var(--clr-dark);
   text-align: center;
   line-height: 1.2rem;
   
